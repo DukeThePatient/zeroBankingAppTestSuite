@@ -11,7 +11,6 @@ Feature: Users should be able to login
     When the user enters invalid credentials
     Then the user should get an error message
 
-  @wip
   Scenario: User should not be able to login with no credentials
     When the user enters no credentials
     Then the user should get an error message

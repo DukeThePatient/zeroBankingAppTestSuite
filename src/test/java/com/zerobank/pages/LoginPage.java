@@ -1,5 +1,7 @@
 package com.zerobank.pages;
 
+import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,5 +24,22 @@ public class LoginPage {
 
     @FindBy(css = "div[class='alert alert-error']")
     public WebElement errorMessage;
+
+    public void login(){
+        LoginPage loginPage = new LoginPage();
+        HomePage homePage = new HomePage();
+
+        String username = ConfigurationReader.get("username");
+        String password = ConfigurationReader.get("password");
+
+        //clicking sign in button
+        homePage.signInBtn.click();
+
+        //entering credentials and submitting
+        loginPage.usernameInput.sendKeys(username);
+        loginPage.userPasswordInput.sendKeys(password);
+        loginPage.submitBtn.click();
+
+    }
 
 }
