@@ -1,4 +1,5 @@
-Feature: Users should be able to login
+@login @smoke
+Feature: Login Page
 
   Background:
     Given The user is on the login page

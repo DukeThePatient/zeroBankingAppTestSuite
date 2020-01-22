@@ -2,6 +2,7 @@ package com.zerobank.step_definitions;
 
 import com.zerobank.pages.AccountSummaryPage;
 import com.zerobank.pages.LoginPage;
+import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -22,8 +23,10 @@ public class AccountSummaryStepDefs {
 
         //assigning the actual account summary page title
         String acctSumPageTitle = Driver.get().getTitle();
+        //assigning the expected account summary page title
+        String expectedTitle = ConfigurationReader.get("acctSummaryTitle");
         //testing the actual page title against the expected page title
-        Assert.assertEquals("Zero - Account Summary", acctSumPageTitle);
+        Assert.assertEquals(expectedTitle, acctSumPageTitle);
 
     }
 
@@ -31,8 +34,10 @@ public class AccountSummaryStepDefs {
     public void the_title_should_be_Zero_Account_Summary() {
         //assigning the actual account summary page title
         String acctSumPageTitle = Driver.get().getTitle();
+        //assigning the expected account summary page title
+        String expectedTitle = ConfigurationReader.get("acctSummaryTitle");
         //testing the actual page title against the expected page title
-        Assert.assertEquals("Zero - Account Summary", acctSumPageTitle);
+        Assert.assertEquals(expectedTitle, acctSumPageTitle);
     }
 
     @Then("the Account Summary page should display the correct account types")
