@@ -14,7 +14,6 @@ Feature: Account Activity Page
             Savings, Checking, Loan, Credit Card, and Brokerage
     Then the drop down menu should have the appropriate options
 
-  @wip
   Scenario: The transactions table should have the columns
             Date, Description, Deposit, Withdrawal
     Then the transaction table should have the appropriate options

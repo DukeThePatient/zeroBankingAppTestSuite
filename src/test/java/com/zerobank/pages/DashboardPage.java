@@ -13,4 +13,7 @@ public class DashboardPage {
     @FindBy(css = "a[href='/bank/redirect.html?url=account-activity.html']")
     public WebElement acctActivityTab;
 
+    @FindBy(css = "a[href='/bank/redirect.html?url=pay-bills.html']")
+    public WebElement payBillsTab;
+
 }
