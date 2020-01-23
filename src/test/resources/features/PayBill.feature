@@ -23,7 +23,7 @@ Feature: Pay Bills Page
   Scenario: The Amount field should not accept alphabetical
     When the user enters alphabetical into the Amount field
     Then the page should display the correct error message for the Amount field
-
+@wip
   Scenario: The Date field should not accept alphabetical characters
     When the user enters alphabetical into the Date field
     Then the page should display the correct error message for the Date field
