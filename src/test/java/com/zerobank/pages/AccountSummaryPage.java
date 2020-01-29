@@ -35,6 +35,9 @@ public class AccountSummaryPage {
     @FindBy(css = "a[href='/bank/account-activity.html?accountId=4']")
     public WebElement loanLink;
 
+    @FindBy(css = "a[href='/bank/redirect.html?url=account-activity.html']")
+    public WebElement accountActivityTab;
+
     public void chooseAccount(String accountType){
         AccountSummaryPage actSumPage = new AccountSummaryPage();
 

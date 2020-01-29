@@ -21,4 +21,9 @@ public class AccountActivityPage {
     @FindBy(xpath = "//div[@id='all_transactions_for_account']//th")
     public List<WebElement> tableColumns;
 
+    @FindBy(css = "a[href='#ui-tabs-2']")
+    public WebElement findTransactionsTab;
+
+
+
 }
